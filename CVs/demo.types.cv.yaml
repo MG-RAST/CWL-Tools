@@ -1,0 +1,7 @@
+type: enum
+name: demo_enum
+label: The type of the table to produce
+symbols:
+  - A
+  - B
+  - C

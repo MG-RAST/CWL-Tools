@@ -1,0 +1,16 @@
+input_file:
+  - class: File
+    path: ./demo.test.job.yaml
+input_strings:
+  - Hello
+  - world
+  - or 
+  - universe
+input_record:
+  text: Something very important
+  numbers: [1,2,3]
+  cv: maybe
+  demo: A
+  super: self
+demo_hero: A
+    
