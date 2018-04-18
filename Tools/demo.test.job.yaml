@@ -1,5 +1,6 @@
 input_file:
   - class: File
+    format: txt
     path: ./demo.test.job.yaml
 input_strings:
   - Hello
@@ -12,5 +13,5 @@ input_record:
   cv: maybe
   demo: A
   super: self
-demo_hero: A
+input_hero: A
     
