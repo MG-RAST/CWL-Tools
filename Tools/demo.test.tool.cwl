@@ -39,7 +39,7 @@ stderr: echo.error
 inputs:
   input_file:
     type: File[]?
-    format: txt
+    # format: txt
     inputBinding:
       prefix: -B=
       separate: false
@@ -52,34 +52,39 @@ inputs:
       separate: false
       itemSeparator: ","  
   input_record:
-    type:
-      type: record
-      label: WTF - complex type
-      fields:
-        - name: text
-          type: string
-        - name: numbers
-          label: whole numbers
-          doc: A goofy number
-          type:
-            type: array
-            items: int
-        - name: cv
-          doc: Make your choice
-          type: 
-            type: enum
-            name: why_name_here
-            label: choices
-            symbols:
-              - yes
-              - no
-              - maybe
-        - name: demo
-          type: ../CVs/demo.types.cv.yaml#demo_enum
-        - name: super
-          type: Hero
-  demo_hero:
-    type: ../CVs/demo.types.cv.yaml#demo_enum
+    type: 
+      - "null" 
+      - ../CVs/demo.types.cv.yaml#demo_record
+      # - type: record
+      #   name: TBS
+      #   label: WTF - complex type
+      #   fields:
+      #     - name: text
+      #       type: string
+      #     - name: numbers
+      #       label: whole numbers
+      #       doc: A goofy number
+      #       type:
+      #         type: array
+      #         items: int
+      #     - name: cv
+      #       doc: Make your choice
+      #       type:
+      #         type: enum
+      #         name: why_name_here
+      #         label: choices
+      #         symbols:
+      #           - yes
+      #           - no
+      #           - maybe
+      #     - name: demo
+      #       type: ../CVs/demo.types.cv.yaml#demo_enum
+      #     - name: super
+      #       type: Hero
+  input_hero:
+    type: 
+      - "null"
+      - ../CVs/demo.types.cv.yaml#demo_enum
     inputBinding:
       position: 10
               
@@ -99,11 +104,11 @@ outputs:
   error: 
     type: stderr  
   
-$namespaces:
-  s: http://schema.org/
-
-$schemas:
-  - https://schema.org/docs/schema_org_rdfa.html  
-
-s:license: "https://www.apache.org/licenses/LICENSE-2.0"
-s:copyrightHolder: "MG-RAST"
+# $namespaces:
+#   s: http://schema.org/
+#
+# $schemas:
+#   - https://schema.org/docs/schema_org_rdfa.html
+#
+# s:license: "https://www.apache.org/licenses/LICENSE-2.0"
+# s:copyrightHolder: "MG-RAST"
