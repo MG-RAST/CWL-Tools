@@ -1,0 +1,17 @@
+demo_file:
+  - class: File
+    format: txt
+    path: ../Tools/demo.test.job.yaml
+demo_text:
+  - Hello
+  - world
+  - or 
+  - universe
+demo_record:
+  text: Something very important
+  numbers: [1,2,3]
+  cv: maybe
+  demo: A
+  super: self
+demo_hero: A
+    
