@@ -1,7 +1,44 @@
-type: enum
-name: demo_enum
-label: The type of the table to produce
-symbols:
-  - A
-  - B
-  - C
+
+- type: enum
+  name: demo_enum
+  label: The type of the table to produce
+  symbols:
+    - A
+    - B
+    - C
+    
+- type: enum
+  name: demo_hero
+  label: Hero types
+  symbols:
+    - Spiderman
+    - Joker
+    - jjflash
+    - self    
+  
+- type: record
+  name: demo_record
+  label: WTF - complex type
+  fields:
+    - name: text
+      type: string
+    - name: numbers
+      label: whole numbers
+      doc: A goofy number
+      type:
+        type: array
+        items: int
+    - name: cv
+      doc: Make your choice
+      type:
+        type: enum
+        name: why_name_here_or_not
+        label: choices
+        symbols:
+          - yes
+          - no
+          - maybe
+    - name: demo
+      type: demo_enum
+    - name: super
+      type: demo_hero
